@@ -162,3 +162,601 @@ textarea {
     padding: 12mm;
   }
 }
+
+
+.auth-shell {
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.auth-card {
+  width: min(420px, 100%);
+}
+
+.success-text {
+  color: #067647;
+  margin: 0;
+}
+
+.ghost-button {
+  background: #eef4ff;
+  color: #0f62fe;
+  border: 1px solid #bfd3ff;
+}
+
+.ghost-button:hover {
+  background: #e2edff;
+}
+
+.subtle-box {
+  background: #f8fafc;
+  border: 1px solid #e4eaf2;
+  border-radius: 10px;
+  padding: 0.75rem;
+}
+
+.subtle-box p {
+  margin: 0 0 0.35rem;
+}
+
+.subtle-link {
+  color: #205cb3;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.subtle-link:hover {
+  color: #113c7a;
+  text-decoration: underline;
+}
+
+.spinner-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.spinner {
+  border: 2px solid color-mix(in srgb, currentColor 30%, transparent);
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: spin 0.75s linear infinite;
+}
+
+.spinner-sm {
+  width: 14px;
+  height: 14px;
+}
+
+.spinner-md {
+  width: 18px;
+  height: 18px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.center-loader {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(238, 243, 248, 0.72);
+  z-index: 20;
+}
+
+.dashboard-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+.dashboard-card {
+  width: min(900px, 100%);
+}
+
+.profile-anchor {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 25;
+  display: grid;
+  justify-items: end;
+  gap: 0.5rem;
+}
+
+.profile-toggle {
+  background: #0f62fe;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.52rem 0.95rem;
+  cursor: pointer;
+}
+
+.profile-chip {
+  width: min(280px, 90vw);
+  display: grid;
+  gap: 0.6rem;
+  padding: 0.8rem 1rem;
+}
+
+.profile-email {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #17375d;
+}
+
+.profile-public-id {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #5d6f86;
+}
+
+.dashboard-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.dashboard-tab {
+  padding: 0.55rem 0.85rem;
+  border: 1px solid #c8d8ee;
+  border-radius: 8px;
+  color: #1f4d8f;
+  background: #f8fbff;
+  display: inline-block;
+}
+
+.dashboard-tab.active {
+  background: #0f62fe;
+  color: #fff;
+  border-color: #0f62fe;
+}
+
+.panel-grid {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.panel-card {
+  border: 1px solid #deebfa;
+  background: #fbfdff;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.inline-action-btn {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .profile-anchor {
+    top: 0.65rem;
+    right: 0.65rem;
+  }
+
+  .dashboard-shell {
+    place-items: start center;
+    padding-top: 4rem;
+  }
+}
+
+/* Universal SaaS dashboard layout */
+.saas-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 100vh;
+  background: #f3f7fc;
+}
+
+.saas-sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 1.2rem;
+  border-right: 1px solid #dce8f8;
+  background: #ffffff;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 1rem;
+}
+
+.saas-logo {
+  margin: 0;
+  color: #1a4ea0;
+}
+
+.saas-subtitle {
+  margin: 0.3rem 0 0;
+  color: #5b708b;
+  font-size: 0.9rem;
+}
+
+.saas-nav {
+  display: grid;
+  gap: 0.45rem;
+  align-content: start;
+}
+
+.saas-nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.62rem 0.7rem;
+  border-radius: 9px;
+  color: #274e86;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.saas-nav-item:hover {
+  background: #f1f6ff;
+  border-color: #cfe0fa;
+}
+
+.saas-nav-item.active {
+  background: #0f62fe;
+  color: #fff;
+}
+
+.history-badge {
+  min-width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  display: inline-grid;
+  place-items: center;
+  background: #0f62fe;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0 0.35rem;
+}
+
+.saas-nav-item.active .history-badge {
+  background: #fff;
+  color: #0f62fe;
+}
+
+.saas-profile-wrap {
+  position: relative;
+}
+
+.saas-profile-trigger {
+  width: 100%;
+  border: 1px solid #cfe0fa;
+  background: #f6faff;
+  color: #1f4d8f;
+  padding: 0.6rem 0.7rem;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.saas-profile-menu {
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 0.45rem);
+  width: 100%;
+  background: #fff;
+  border: 1px solid #d7e5f8;
+  border-radius: 10px;
+  padding: 0.5rem;
+  box-shadow: 0 12px 28px rgba(21, 37, 67, 0.12);
+}
+
+.saas-workspace {
+  padding: 1.4rem;
+}
+
+.workspace-panel {
+  width: min(1080px, 100%);
+  margin: 0 auto;
+}
+
+.workspace-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+}
+
+.workspace-card {
+  background: #fff;
+  border: 1px solid #d8e5f7;
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.danger-btn {
+  background: #d92d20;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.48rem 0.72rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.danger-btn:hover {
+  background: #e5484d;
+  box-shadow: 0 8px 16px rgba(217, 45, 32, 0.18);
+}
+
+@media (max-width: 900px) {
+  .saas-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .saas-sidebar {
+    position: static;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #dce8f8;
+  }
+
+  .workspace-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.loader-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(11, 24, 46, 0.25);
+  display: grid;
+  place-items: center;
+  z-index: 50;
+}
+
+.loader-content {
+  background: #fff;
+  border: 1px solid #d8e5f7;
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.loader-spinner {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #c7d8f4;
+  border-top-color: #0f62fe;
+  animation: spin 0.8s linear infinite;
+}
+
+.dashboard-sidebar-nav {
+  display: grid;
+  gap: 0.45rem;
+  align-content: start;
+}
+
+.sidebar-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.62rem 0.7rem;
+  border-radius: 9px;
+  color: #274e86;
+  border: 1px solid transparent;
+  background: transparent;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.sidebar-button:hover {
+  background: #f1f6ff;
+  border-color: #cfe0fa;
+}
+
+.sidebar-button.active {
+  background: #0f62fe;
+  color: #fff;
+}
+
+.sidebar-button-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.profile-area {
+  position: relative;
+}
+
+.profile-trigger {
+  width: 100%;
+  border: 1px solid #cfe0fa;
+  background: #f6faff;
+  color: #183a66;
+  padding: 0.6rem 0.7rem;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.profile-dropdown {
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 0.45rem);
+  width: 100%;
+  background: #fff;
+  border: 1px solid #d7e5f8;
+  border-radius: 10px;
+  padding: 0.5rem;
+  box-shadow: 0 12px 28px rgba(21, 37, 67, 0.12);
+}
+
+.profile-dropdown {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.profile-email-text {
+  margin: 0;
+  font-size: 0.86rem;
+  color: #183a66;
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.profile-id-text {
+  margin: 0;
+  font-size: 0.72rem;
+  color: #586069;
+}
+
+/* Dashboard shell bugfix + sidebar toggle + print preview */
+.saas-layout {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+}
+
+.saas-layout.sidebar-collapsed {
+  grid-template-columns: 72px minmax(0, 1fr);
+}
+
+.saas-sidebar {
+  width: 100%;
+  overflow: hidden;
+  transition: width 0.2s ease;
+}
+
+.mobile-workspace-header {
+  display: none;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.7rem;
+}
+
+.sidebar-collapse-toggle {
+  border: 1px solid #cfe0fa;
+  background: #f6faff;
+  color: #1f4d8f;
+  padding: 0.45rem 0.62rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.workspace-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 45;
+  background: rgba(11, 24, 46, 0.4);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.workspace-overlay-card {
+  width: min(760px, 100%);
+  max-height: 92vh;
+  overflow: auto;
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid #dce8f8;
+  padding: 1rem;
+}
+
+.printable-slip {
+  border: 1px solid #dde7f5;
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  background: #fff;
+}
+
+.mobile-sidebar-backdrop {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .saas-layout,
+  .saas-layout.sidebar-collapsed {
+    grid-template-columns: 1fr;
+  }
+
+  .mobile-workspace-header {
+    display: flex;
+  }
+
+  .saas-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: min(260px, 82vw);
+    height: 100vh;
+    z-index: 60;
+    transform: translateX(-110%);
+    transition: transform 0.2s ease;
+    border-right: 1px solid #dce8f8;
+    border-bottom: none;
+  }
+
+  .saas-sidebar.mobile-open {
+    transform: translateX(0);
+  }
+
+  .mobile-sidebar-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 55;
+    background: rgba(0, 0, 0, 0.35);
+    border: none;
+  }
+}
+
+@media print {
+  .saas-sidebar,
+  .mobile-workspace-header,
+  .row-actions.no-print,
+  .workspace-overlay .no-print,
+  .mobile-sidebar-backdrop {
+    display: none !important;
+  }
+
+  .workspace-overlay {
+    position: static;
+    background: #fff;
+    padding: 0;
+  }
+
+  .workspace-overlay-card {
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    width: 100%;
+    max-height: none;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  .print-area-only,
+  .print-area-only * {
+    visibility: visible;
+  }
+
+  .print-area-only {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
