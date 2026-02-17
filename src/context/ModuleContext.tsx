@@ -2,7 +2,7 @@ import { Dispatch, ReactNode, SetStateAction, createContext, useContext, useMemo
 import { auth } from '../services/firebase';
 import { useAuth } from './AuthContext';
 import type { ModuleId } from '../types/index.d.ts';
-import type { ModuleId } from '../types/index.d.ts';
+import type from '../types/patient.ts';
 
 interface ModuleContextValue {
   activeModule: ModuleId;
@@ -75,4 +75,5 @@ export function useSidebar() {
     setSidebarOpen
   };
 }
+
 
