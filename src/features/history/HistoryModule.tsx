@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { deleteRecord, fetchRecords } from '../../services/patientService';
 import { useModuleContext } from '../../context/ModuleContext';
-import { PrintPreview } from '../print/PrintPreview';
-import { Patient } from '../types/patient';
+import { PrintPreview } from '../../print/PrintPreview';
+import { Patient } from '../../types/patient';
 
 export default function HistoryModule() {
   const { userId, setLoading, setHistoryCount, openOverlay, closeOverlay } = useModuleContext();
