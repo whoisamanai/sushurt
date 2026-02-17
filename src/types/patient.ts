@@ -1,7 +1,7 @@
 import { Timestamp } from 'firebase/firestore';
 
 export interface Patient {
-  id?: string;
+  id: string;
   name: string;
   fatherName: string;
   address: string;
