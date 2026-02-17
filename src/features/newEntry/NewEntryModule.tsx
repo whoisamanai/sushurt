@@ -1,10 +1,9 @@
-import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import { deleteRecord, fetchRecords } from '../../services/patientService';
+import { FormEvent, useState } from 'react';
+import { Timestamp } from 'firebase/firestore';
+import { addRecord } from '../../services/patientService';
 import { useModuleContext } from '../../context/ModuleContext';
 import PrintPreview from '../print/PrintPreview';
-import type { Patient } from '../../types/patient';
-
+import type { Patient, PatientInput } from '../../types/patient';
 
 const initialState: PatientInput = {
   name: '',
