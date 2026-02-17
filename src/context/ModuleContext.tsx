@@ -10,7 +10,7 @@ import {
 
 import { auth } from "../services/firebase";
 import { useAuth } from "./AuthContext";
-import type { ModuleId } from "../types";
+import type { ModuleId } from "../../types";
 
 /* -------------------------------------------------- */
 /* Context Types */
@@ -156,3 +156,4 @@ export function useSidebar() {
     setSidebarOpen
   };
 }
+
