@@ -2,7 +2,7 @@ import { FormEvent, useState } from 'react';
 import { Timestamp } from 'firebase/firestore';
 import { addRecord } from '../../services/patientService';
 import { useModuleContext } from '../../context/ModuleContext';
-import { PrintPreview } from '../print/PrintPreview';
+import { PrintPreview } from '../../print/PrintPreview';
 import type { Patient, PatientInput } from '../../types';
 
 const initialState: PatientInput = {
