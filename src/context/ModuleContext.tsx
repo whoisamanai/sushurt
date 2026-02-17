@@ -8,9 +8,9 @@ import {
   type SetStateAction
 } from "react";
 
-import { auth } from "../services/firebase";
-import { useAuth } from "./AuthContext";
-import type { ModuleId } from "../../types";
+import { auth } from '../services/firebase';
+import { useAuth } from './AuthContext';
+import type { ModuleId } from '../types/index';
 
 /* -------------------------------------------------- */
 /* Context Types */
@@ -156,4 +156,5 @@ export function useSidebar() {
     setSidebarOpen
   };
 }
+
 
